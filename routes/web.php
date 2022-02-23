@@ -11,12 +11,15 @@
 |
 */
 
+use App\Http\Controllers\GirlController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-//    return view('welcome');
-    $now = time();
+//Route::get('/', function () {
+////    return view('welcome');
+//    $now = time();
+//
+//
+//    dd($now, app('now2'), app('now'));
+//});
 
-
-    dd($now, app('now2'), app('now'));
-});
+Route::get('/girl', [GirlController::class, 'index'])->name('home');
